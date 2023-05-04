@@ -3,13 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package domain;
+package domain.ColasNListas;
+
+import domain.Exceptions.QueueException;
+import domain.interfaces.Queue;
+
 /**
  *
  * @author Profesor Lic. Gilberth Chaves A.
  * Cola con arreglos
  */
-public class ArrayQueue implements Queue{
+public class ArrayQueue implements Queue {
     //Atributos
     private int n; //el tam max de la cola
     private Object queue[]; //arreglo de objetos

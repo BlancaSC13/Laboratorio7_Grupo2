@@ -1,4 +1,4 @@
-package domain;
+package domain.Objetos;
 
 public class Place {
     private int id;

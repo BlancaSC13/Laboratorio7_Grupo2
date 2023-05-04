@@ -1,4 +1,8 @@
-package domain;
+package domain.ColasNListas;
+
+import domain.Exceptions.QueueException;
+import domain.Objetos.Node;
+import domain.interfaces.Queue;
 
 public class PriorityLinkedQueue implements Queue {
 

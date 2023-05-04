@@ -1,4 +1,4 @@
-package domain;
+package domain.Objetos;
 
 public class Climate {
     private Place place;

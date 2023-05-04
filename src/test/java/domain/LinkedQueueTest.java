@@ -1,6 +1,8 @@
 package domain;
 
 
+import domain.ColasNListas.LinkedQueue;
+import domain.Exceptions.QueueException;
 import org.junit.jupiter.api.Test;
 
 class LinkedQueueTest {

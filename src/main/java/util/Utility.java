@@ -5,7 +5,7 @@
  */
 package util;
 
-import domain.PriorityLinkedQueue;
+import domain.ColasNListas.PriorityLinkedQueue;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -194,5 +194,13 @@ public class Utility {
         return list[i];
     }
 
+    public static String mood(int i) {
+        String list[] = {
+                "Happiness", "Sadness", "Anger", "Sickness",
+                "Cheerful", "Reflective", "Gloomy", "Romantic",
+                "Calm", "Hopeful", "Fearful", "Tense", "Lonely"
+        };
+        return list[random(12)];
+    }
 
 }

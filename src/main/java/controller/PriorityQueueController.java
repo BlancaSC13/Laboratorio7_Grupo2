@@ -1,6 +1,6 @@
 package controller;
 
-import domain.PriorityLinkedQueue;
+import domain.ColasNListas.PriorityLinkedQueue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

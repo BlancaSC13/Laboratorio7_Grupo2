@@ -1,5 +1,7 @@
 package domain;
 
+import domain.ColasNListas.HeaderLinkedQueue;
+import domain.Exceptions.QueueException;
 import org.junit.jupiter.api.Test;
 
 class HeaderLinkedQueueTest {

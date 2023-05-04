@@ -1,8 +1,8 @@
 package domain;
 
+import domain.ColasNListas.PriorityLinkedQueue;
+import domain.Exceptions.QueueException;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PriorityLinkedQueueTest {
     @Test
