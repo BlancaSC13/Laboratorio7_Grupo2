@@ -14,6 +14,7 @@ class ArrayQueueTest {
             for (int i = 0; i < 20; i++) {
                 queue.enQueue(new Person(util.Utility.getPerson(i), util.Utility.mood(i)));
             }
+            System.out.println(queue);
             System.out.println(queue.size());
         } catch (QueueException e) {
             throw new RuntimeException(e);
