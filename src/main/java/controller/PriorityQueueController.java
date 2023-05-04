@@ -13,9 +13,10 @@ public class PriorityQueueController {
     @javafx.fxml.FXML
     private TextField txtName;
     @FXML
-    private ChoiceBox<String> moodChoiceBox;
+    private ComboBox<String> moodComboBox;
+
     @FXML
-    private ChoiceBox<String> priorityChoiceBox;
+    private ComboBox<String> priorityComboBox;
     @javafx.fxml.FXML
     private TableView<List<String>> PriorityTableView;
     @javafx.fxml.FXML
@@ -32,8 +33,8 @@ public class PriorityQueueController {
         this.alert = util.FXUtility.alert("", "");
         this.priorityLinkedQueue = util.Utility.getPriorityLinkedQueue();//Cargamos la cola con prioridad
         //llenamos los choiceBox
-        this.moodChoiceBox.setItems(moodOl);
-        this.priorityChoiceBox.setItems(priorityOl);
+        this.moodComboBox.setItems(moodOl);
+        this.priorityComboBox.setItems(priorityOl);
     }
 
     ObservableList<String> moodOl = FXCollections.observableArrayList(
