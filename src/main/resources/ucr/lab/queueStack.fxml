@@ -11,22 +11,22 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="689.0" prefWidth="939.0" style="-fx-background-color: #FEFCFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.QueueStackController">
+<BorderPane prefHeight="720.0" prefWidth="943.0" style="-fx-background-color: #FEFCFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.QueueStackController">
    <bottom>
-      <AnchorPane prefHeight="689.0" prefWidth="941.0" style="-fx-background-color: #FEFCFF;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="689.0" prefWidth="871.0" style="-fx-background-color: #FEFCFF;" BorderPane.alignment="CENTER">
          <children>
-            <Pane prefHeight="105.0" prefWidth="943.0" style="-fx-background-color: #015e71; -fx-border-color: black;">
+            <Pane layoutY="-37.0" prefHeight="120.0" prefWidth="943.0" style="-fx-background-color: #015e71;">
                <children>
-                  <Text fill="WHITE" layoutX="313.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Queue to Stack">
+                  <Text fill="WHITE" layoutX="275.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Queue to Stack">
                      <font>
-                        <Font name="System Bold Italic" size="45.0" />
+                        <Font name="System Bold Italic" size="56.0" />
                      </font>
                   </Text>
                </children>
             </Pane>
-            <Text layoutX="355.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weather Condition">
+            <Text layoutX="364.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weather Condition">
                <font>
-                  <Font name="Arial Bold" size="28.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Text>
             <Text layoutX="312.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Place:">
@@ -57,22 +57,22 @@
                   <TableColumn fx:id="tblColumnWeatherConditionSTACK" prefWidth="167.0" text="Weather Condition" />
                </columns>
             </TableView>
-            <Button layoutX="394.0" layoutY="414.0" mnemonicParsing="false" onAction="#btnPushAllOnAction" prefHeight="75.0" prefWidth="156.0" style="-fx-background-color: #027a8e;" text="Push All" textFill="WHITE">
+            <Button layoutX="393.0" layoutY="414.0" mnemonicParsing="false" onAction="#btnPushAllOnAction" prefHeight="75.0" prefWidth="156.0" style="-fx-background-color: #027a8e;" text="Push All" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Semibold" size="28.0" />
                </font>
             </Button>
-            <Button layoutX="373.0" layoutY="619.0" mnemonicParsing="false" onAction="#btnAutoEnQueueOnAction" prefHeight="49.0" prefWidth="212.0" style="-fx-background-color: #027a8e;" text="Auto EnQueue" textFill="WHITE">
+            <Button layoutX="366.0" layoutY="618.0" mnemonicParsing="false" onAction="#btnAutoEnQueueOnAction" prefHeight="49.0" prefWidth="212.0" style="-fx-background-color: #027a8e;" text="Auto EnQueue" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Semibold" size="22.0" />
                </font>
             </Button>
-            <Button layoutX="692.0" layoutY="142.0" mnemonicParsing="false" onAction="#btnEnQueueOnAction" prefHeight="39.0" prefWidth="156.0" style="-fx-background-color: #027a8e;" text="EnQueue" textFill="WHITE">
+            <Button layoutX="692.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnEnQueueOnAction" prefHeight="55.0" prefWidth="151.0" style="-fx-background-color: #027a8e;" text="EnQueue" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Semibold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="692.0" layoutY="192.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="39.0" prefWidth="156.0" style="-fx-background-color: #027a8e;" text="Clear" textFill="WHITE">
+            <Button layoutX="692.0" layoutY="188.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="55.0" prefWidth="151.0" style="-fx-background-color: #027a8e;" text="Clear" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Semibold" size="18.0" />
                </font>

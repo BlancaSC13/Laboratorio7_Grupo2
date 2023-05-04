@@ -15,64 +15,64 @@
    <center>
       <AnchorPane prefHeight="657.0" prefWidth="871.0" style="-fx-background-color: #FEFCFF;">
          <children>
-            <Pane prefHeight="122.0" prefWidth="875.0" style="-fx-background-color: lightblue;">
+            <Pane prefHeight="122.0" prefWidth="943.0" style="-fx-background-color: #015e71;">
                <children>
-                  <Text layoutX="108.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Priority Queue Management">
+                  <Text fill="WHITE" layoutX="127.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Priority Queue Management">
                      <font>
                         <Font name="System Bold Italic" size="52.0" />
                      </font>
                   </Text>
                </children>
             </Pane>
-            <Text layoutX="332.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admission Process">
+            <Text layoutX="398.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admission Process">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <Text layoutX="285.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+            <Text layoutX="312.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
                <font>
                   <Font name="Arial" size="24.0" />
                </font>
             </Text>
-            <Text layoutX="285.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mood:">
+            <Text layoutX="312.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mood:">
                <font>
                   <Font name="Arial" size="24.0" />
                </font>
             </Text>
-            <Text layoutX="284.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Priority:">
+            <Text layoutX="311.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Priority:">
                <font>
                   <Font name="Arial" size="24.0" />
                </font>
             </Text>
-            <TextField fx:id="txtName" layoutX="383.0" layoutY="173.0" prefHeight="34.0" prefWidth="186.0">
+            <TextField fx:id="txtName" layoutX="410.0" layoutY="175.0" prefHeight="34.0" prefWidth="186.0">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <Button layoutX="668.0" layoutY="170.0" mnemonicParsing="false" onAction="#btnEnQueueOnAction" prefHeight="55.0" prefWidth="154.0" style="-fx-background-color: #357EC7;" text="EnQueue" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutX="698.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnEnQueueOnAction" prefHeight="55.0" prefWidth="154.0" style="-fx-background-color: #027a8e;" text="EnQueue" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Semibold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="669.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="55.0" prefWidth="151.0" style="-fx-background-color: #357EC7;" text="Clear" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutX="699.0" layoutY="231.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="55.0" prefWidth="151.0" style="-fx-background-color: #027a8e;" text="Clear" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Semibold" size="18.0" />
                </font>
             </Button>
-            <TableView fx:id="PriorityTableView" layoutX="90.0" layoutY="316.0" prefHeight="240.0" prefWidth="706.0">
+            <TableView fx:id="PriorityTableView" layoutX="94.0" layoutY="314.0" prefHeight="240.0" prefWidth="755.0" style="-fx-border-color: black;">
               <columns>
-                <TableColumn fx:id="tblColumnName" prefWidth="263.6666564941406" text="Name" />
-                <TableColumn fx:id="tblColumnMood" prefWidth="224.33334350585938" text="Mood" />
-                  <TableColumn fx:id="tblColumnPriority" prefWidth="217.0" text="Priority" />
+                <TableColumn fx:id="tblColumnName" prefWidth="279.0" text="Name" />
+                <TableColumn fx:id="tblColumnMood" prefWidth="250.0" text="Mood" />
+                  <TableColumn fx:id="tblColumnPriority" prefWidth="224.0" text="Priority" />
               </columns>
             </TableView>
-            <Button layoutX="324.0" layoutY="564.0" mnemonicParsing="false" onAction="#btnAutoEnQueueOnAction" prefHeight="55.0" prefWidth="247.0" style="-fx-background-color: #357EC7;" text="Auto EnQueue" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutX="348.0" layoutY="564.0" mnemonicParsing="false" onAction="#btnAutoEnQueueOnAction" prefHeight="55.0" prefWidth="247.0" style="-fx-background-color: #027a8e;" text="Auto EnQueue" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Semibold" size="20.0" />
                </font>
             </Button>
-            <ComboBox fx:id="moodComboBox" layoutX="383.0" layoutY="224.0" prefHeight="30.0" prefWidth="185.0" />
-            <ComboBox fx:id="priorityComboBox" layoutX="383.0" layoutY="267.0" prefHeight="30.0" prefWidth="185.0" />
+            <ComboBox fx:id="moodComboBox" layoutX="410.0" layoutY="226.0" prefHeight="30.0" prefWidth="185.0" />
+            <ComboBox fx:id="priorityComboBox" layoutX="410.0" layoutY="269.0" prefHeight="30.0" prefWidth="185.0" />
          </children>
       </AnchorPane>
    </center>
