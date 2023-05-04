@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92ce4915-46b3-44d2-a389-d47216f49758" name="Changes" comment="interfaz Queue/Stack">
+    <list default="true" id="92ce4915-46b3-44d2-a389-d47216f49758" name="Changes" comment="clear y set">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PriorityQueueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PriorityQueueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/QueueStackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/QueueStackController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/domain/ArrayQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/ArrayQueueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/domain/HeaderLinkedQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/HeaderLinkedQueueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/domain/LinkedQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/LinkedQueueTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +85,7 @@
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.HeaderLinkedQueueTest.test2">
     <configuration name="ArrayQueueTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab" />
       <extension name="coverage">
@@ -96,6 +97,38 @@
       <option name="PACKAGE_NAME" value="domain" />
       <option name="MAIN_CLASS_NAME" value="domain.ArrayQueueTest" />
       <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HeaderLinkedQueueTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="domain" />
+      <option name="MAIN_CLASS_NAME" value="domain.HeaderLinkedQueueTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedQueueTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="domain" />
+      <option name="MAIN_CLASS_NAME" value="domain.LinkedQueueTest" />
+      <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -116,6 +149,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HeaderLinkedQueueTest.test2" />
+        <item itemvalue="JUnit.LinkedQueueTest.test2" />
         <item itemvalue="JUnit.ArrayQueueTest.test" />
       </list>
     </recent_temporary>
@@ -129,7 +164,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683143600769</updated>
       <workItem from="1683155568256" duration="10454000" />
-      <workItem from="1683214799220" duration="9392000" />
+      <workItem from="1683214799220" duration="16300000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1683216136862</created>
@@ -173,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683226732030</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="clear y set">
+      <created>1683228115273</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683228115273</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +237,7 @@
     <MESSAGE value="Test 2 y separación por carpetas" />
     <MESSAGE value="comboBox" />
     <MESSAGE value="interfaz Queue/Stack" />
-    <option name="LAST_COMMIT_MESSAGE" value="interfaz Queue/Stack" />
+    <MESSAGE value="clear y set" />
+    <option name="LAST_COMMIT_MESSAGE" value="clear y set" />
   </component>
 </project>

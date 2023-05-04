@@ -1,8 +1,12 @@
 package domain;
 
 
-import domain.ColasNListas.LinkedQueue;
+import domain.ColasNListas.*;
 import domain.Exceptions.QueueException;
+import domain.Exceptions.StackException;
+import domain.Objetos.Person;
+import domain.Objetos.Place;
+import domain.Objetos.Weather;
 import org.junit.jupiter.api.Test;
 
 class LinkedQueueTest {
@@ -33,7 +37,59 @@ class LinkedQueueTest {
 
     }
 
+    @Test
     void test2() {
 
+        //Singly Linked List
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+        for (int i = 0; i < 30; i++) {
+            singlyLinkedList.add(util.Utility.getCountry(i));
+        }
+
+        //Array Queue
+        ArrayQueue arrayQueue = new ArrayQueue(20);
+        try {
+            for (int i = 0; i < 20; i++) {
+                arrayQueue.enQueue(new Person(util.Utility.getPerson(i), util.Utility.mood(i)));
+            }
+            System.out.println(arrayQueue.size());
+        } catch (QueueException e) {
+            throw new RuntimeException(e);
+        }
+
+        //ArrayStack
+        ArrayStack arrayStack = new ArrayStack(30);
+        try {
+            for (int i = 0; i < 5; i++) {
+                arrayStack.push(util.Utility.getPerson(i));
+                arrayStack.push(new Weather(util.Utility.getWeather()));
+                arrayStack.push(new Place(util.Utility.getPlace()));
+                arrayStack.push(util.Utility.random());
+            }
+        } catch (StackException e) {
+            throw new RuntimeException(e);
+        }
+
+        //Linked Stack
+        LinkedStack linkedStack = new LinkedStack();
+        try {
+            for (int i = 0; i < 100; i++) {
+                linkedStack.push(util.Utility.random(1, 100));
+            }
+        } catch (StackException e) {
+            throw new RuntimeException(e);
+        }
+
+        //Linked Queue
+        LinkedQueue queue = new LinkedQueue();
+        try {
+            queue.enQueue(singlyLinkedList);
+            queue.enQueue(arrayQueue);
+            queue.enQueue(arrayStack);
+            queue.enQueue(linkedStack);
+        } catch (QueueException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(queue);
     }
 }

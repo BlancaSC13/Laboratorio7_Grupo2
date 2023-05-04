@@ -8,6 +8,7 @@ package util;
 import domain.ColasNListas.ArrayStack;
 import domain.ColasNListas.LinkedQueue;
 import domain.ColasNListas.PriorityLinkedQueue;
+import domain.Objetos.Person;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -49,7 +50,10 @@ public class Utility {
     public static PriorityLinkedQueue getPriorityLinkedQueue() {
         return priorityLinkedQueue;
     }
-    public static LinkedQueue getLinkedQueue() {return linkedQueue;}
+
+    public static LinkedQueue getLinkedQueue() {
+        return linkedQueue;
+    }
 
     public static int random() {
         return 1 + (int) Math.floor(Math.random() * 99);
@@ -201,6 +205,19 @@ public class Utility {
         return lista[random(9)];
     }
 
+    public static String getWeather(){
+        String list[]= {"rainy", "thunderstorm", "sunny",
+                "cloudy", "foggy"};
+        return list[random(4)];
+    }
+    public static String getPlace(){
+        String list[]= {"San José", "Ciudad Quesada", "Paraíso",
+                "Turrialba", "Limón", "Liberia", "Puntarenas", "San Ramón", "Puerto Viejo", "Volcán",
+                "Irazú", "Pérez Zeledón", "Palmares", "Orotina", "El coco", "Ciudad Neilly", "Sixaola",
+                "Guápiles", "Siquirres"," El Guarco", "Cartago", "Santa Bárbara", "Jacó", "Manuel Antonio",
+                "Quepos", "Santa Cruz", "Nicoya"};
+        return list[random(26)];
+    }
     public static String getIslandNames(int i) {
         String list[] = {"Santorini", "Creta", "Sri Lanka", "Ibiza",
                 "Isla de Pascua", "Bahamas", "Maldivas", "Gran Caimán",

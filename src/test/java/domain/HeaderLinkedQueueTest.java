@@ -2,6 +2,9 @@ package domain;
 
 import domain.ColasNListas.HeaderLinkedQueue;
 import domain.Exceptions.QueueException;
+import domain.Objetos.Climate;
+import domain.Objetos.Place;
+import domain.Objetos.Weather;
 import org.junit.jupiter.api.Test;
 
 class HeaderLinkedQueueTest {
@@ -29,5 +32,21 @@ class HeaderLinkedQueueTest {
         } catch (QueueException e) {
             throw new RuntimeException(e);
         }
+    }
+
+
+    @Test
+    void test2() {
+        HeaderLinkedQueue hlq1 = new HeaderLinkedQueue();
+        HeaderLinkedQueue hlq2 = new HeaderLinkedQueue();
+        HeaderLinkedQueue hlq3 = new HeaderLinkedQueue();
+        try {
+            for (int i = 0; i < 20; i++) {
+                hlq1.enQueue(new Climate(new Place(util.Utility.getPlace()), new Weather(util.Utility.getWeather())));
+            }
+        } catch (QueueException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(hlq1);
     }
 }
