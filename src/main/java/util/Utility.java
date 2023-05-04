@@ -5,6 +5,8 @@
  */
 package util;
 
+import domain.ColasNListas.ArrayStack;
+import domain.ColasNListas.LinkedQueue;
 import domain.ColasNListas.PriorityLinkedQueue;
 
 import java.text.DecimalFormat;
@@ -23,6 +25,8 @@ public class Utility {
     private static Random random;    // pseudo-random number generator
     private static long seed;        // pseudo-random number generator seed
     private static PriorityLinkedQueue priorityLinkedQueue;
+    private static LinkedQueue linkedQueue;
+    private static ArrayStack arrayStack;
 
     // static initializer
     static {
@@ -30,12 +34,22 @@ public class Utility {
         seed = System.currentTimeMillis();
         random = new Random(seed);
         priorityLinkedQueue = new PriorityLinkedQueue();
+        linkedQueue = new LinkedQueue();
 
+    }
+
+    public static void setPriorityLinkedQueue(PriorityLinkedQueue priorityLinkedQueue) {
+        Utility.priorityLinkedQueue = priorityLinkedQueue;
+    }
+
+    public static void setLinkedQueue(LinkedQueue linkedQueue) {
+        Utility.linkedQueue = linkedQueue;
     }
 
     public static PriorityLinkedQueue getPriorityLinkedQueue() {
         return priorityLinkedQueue;
     }
+    public static LinkedQueue getLinkedQueue() {return linkedQueue;}
 
     public static int random() {
         return 1 + (int) Math.floor(Math.random() * 99);
@@ -202,5 +216,6 @@ public class Utility {
         };
         return list[random(12)];
     }
+
 
 }
