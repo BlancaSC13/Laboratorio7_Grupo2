@@ -8,12 +8,6 @@ public class Person {
         this.name = name;
         this.mood = mood;//estado de ánimo
     }
-
-    public Person(String name) {
-        this.name = name;
-    }
-
-
     public String getName() {
         return name;
     }

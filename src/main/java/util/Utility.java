@@ -144,7 +144,6 @@ public class Utility {
         if (a instanceof String && b instanceof String) return "String";
         if (a instanceof Character && b instanceof Character) return "Character";
         if (a instanceof Person && b instanceof Person) return "Person";
-        if (a instanceof ArrayQueue && b instanceof ArrayQueue) return "front";
         return "Unknown"; //desconocido
     }
 

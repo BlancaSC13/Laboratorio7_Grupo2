@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92ce4915-46b3-44d2-a389-d47216f49758" name="Changes" comment="LinkedQueueTest listo">
+    <list default="true" id="92ce4915-46b3-44d2-a389-d47216f49758" name="Changes" comment="ArrayQueueTest listo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/ColasNListas/ArrayQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/ColasNListas/ArrayQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domain/Objetos/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Objetos/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Utility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/domain/ArrayQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/ArrayQueueTest.java" afterDir="false" />
@@ -222,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683254600853</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ArrayQueueTest listo">
+      <created>1683260421087</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683260421087</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +252,7 @@
     <MESSAGE value="interfaz Queue/Stack" />
     <MESSAGE value="clear y set" />
     <MESSAGE value="LinkedQueueTest listo" />
-    <option name="LAST_COMMIT_MESSAGE" value="LinkedQueueTest listo" />
+    <MESSAGE value="ArrayQueueTest listo" />
+    <option name="LAST_COMMIT_MESSAGE" value="ArrayQueueTest listo" />
   </component>
 </project>
