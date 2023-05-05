@@ -35,7 +35,9 @@ class ArrayQueueTest {
             //testeos
             System.out.println(arrayQueue);
             System.out.println(arrayQueue.size());
-/*            System.out.println(arrayQueue.contains(new Person("Erick","Fearful")));
+            System.out.println(arrayQueue.contains("Tense"));
+
+/*           System.out.println(arrayQueue.contains(new Person("Erick","Fearful")));
             System.out.println(arrayQueue.contains(new Person("Mariana","Anger")));
             System.out.println(arrayQueue.indexOf(new Person("Jason", "Calm")));*/
 

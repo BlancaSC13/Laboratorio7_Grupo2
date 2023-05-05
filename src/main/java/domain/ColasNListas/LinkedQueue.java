@@ -124,7 +124,7 @@ public class LinkedQueue implements Queue {
         try {
             LinkedQueue aux = new LinkedQueue();
             while (!isEmpty()) {
-                result += front() + ", ";
+                result += front() + " ";
                 aux.enQueue(deQueue());
             }
             while (!aux.isEmpty()) {

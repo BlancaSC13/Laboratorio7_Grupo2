@@ -6,6 +6,7 @@
 package domain.ColasNListas;
 
 import domain.Exceptions.QueueException;
+import domain.Objetos.Person;
 import domain.interfaces.Queue;
 
 /**
@@ -104,7 +105,7 @@ public class ArrayQueue implements Queue {
         ArrayQueue aux = new ArrayQueue(size());
         boolean finded = false; //encontrado
         while(!isEmpty()){
-            if(util.Utility.compare(front(), element)==0){
+            if(util.Utility.compare(front, element)==0){
                 finded = true;
             }
             aux.enQueue(deQueue());

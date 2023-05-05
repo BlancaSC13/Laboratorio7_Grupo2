@@ -52,7 +52,6 @@ class LinkedQueueTest {
             for (int i = 0; i < 20; i++) {
                 arrayQueue.enQueue(new Person(util.Utility.getPerson(i), util.Utility.mood(i)));
             }
-            System.out.println(arrayQueue.size());
         } catch (QueueException e) {
             throw new RuntimeException(e);
         }
@@ -87,9 +86,38 @@ class LinkedQueueTest {
             queue.enQueue(arrayQueue);
             queue.enQueue(arrayStack);
             queue.enQueue(linkedStack);
+            System.out.println(queue);
+            System.out.println("Size: " + queue.size());
+
+           queue = deQueueArray(queue);
+           System.out.println(queue);
+           System.out.println("Size: " + queue.size());
+
+
         } catch (QueueException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(queue);
+
+    }
+
+    public LinkedQueue deQueueArray(LinkedQueue queue) {
+        //ArrayStack stack = new ArrayStack(30);
+        LinkedQueue aux = new LinkedQueue();
+        try {
+            while (!queue.isEmpty()) {
+                if(util.Utility.instanceOf(queue.front())=="arrayStack"){
+                    queue.deQueue();
+                }else{
+                    aux.enQueue(queue.deQueue());
+                }
+
+            }
+            while (!aux.isEmpty()){
+                queue.enQueue(aux.deQueue());
+            }
+        } catch (QueueException e) {
+            throw new RuntimeException(e);
+        }
+        return queue;
     }
 }

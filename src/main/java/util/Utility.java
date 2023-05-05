@@ -118,14 +118,20 @@ public class Utility {
                 Character ch2 = (Character) b;
                 return ch1.compareTo(ch2) < 0 ? -1 :
                         ch1.compareTo(ch2) > 0 ? 1 : 0;
+            case "Person":
+                Person p1 = (Person) a;
+                Person p2 = (Person) b;
+                return p1.getMood().compareToIgnoreCase(p2.getMood()) <0 ? -1:
+                        p1.getMood().compareToIgnoreCase(p2.getMood()) > 0 ? 1: 0;
         }
         return 2; //Unknown
     }
 
-    private static String instanceOf(Object a) {
+    public static String instanceOf(Object a) {
         if (a instanceof Integer) return "Integer";
         if (a instanceof String) return "String";
         if (a instanceof Character) return "Character";
+        if (a instanceof ArrayStack) return "arrayStack";
         return "Unknown"; //desconocido
     }
 
@@ -133,6 +139,8 @@ public class Utility {
         if (a instanceof Integer && b instanceof Integer) return "Integer";
         if (a instanceof String && b instanceof String) return "String";
         if (a instanceof Character && b instanceof Character) return "Character";
+        if (a instanceof Person && b instanceof Person) return "Person";
+        if (a instanceof ArrayStack && b instanceof ArrayStack) return "arrayStack";
         return "Unknown"; //desconocido
     }
 
@@ -233,6 +241,5 @@ public class Utility {
         };
         return list[random(12)];
     }
-
 
 }

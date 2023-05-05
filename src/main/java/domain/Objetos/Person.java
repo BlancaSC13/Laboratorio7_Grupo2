@@ -9,6 +9,10 @@ public class Person {
         this.mood = mood;//estado de ánimo
     }
 
+    public Person(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -27,9 +31,9 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", mood='" + mood + '\'' +
-                '}';
+        return "Person{  " +
+                "name= "  + name +
+                "mood= " + mood + "}";
+
     }
 }
