@@ -13,6 +13,7 @@ public class Person {
         this.name = name;
     }
 
+
     public String getName() {
         return name;
     }
@@ -33,7 +34,7 @@ public class Person {
     public String toString() {
         return "Person{  " +
                 "name= "  + name +
-                "mood= " + mood + "}";
+                " mood= " + mood + "}";
 
     }
 }

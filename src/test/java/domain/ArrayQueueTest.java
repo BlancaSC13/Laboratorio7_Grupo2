@@ -35,15 +35,32 @@ class ArrayQueueTest {
             //testeos
             System.out.println(arrayQueue);
             System.out.println(arrayQueue.size());
-            System.out.println(arrayQueue.contains("Tense"));
+            System.out.println(arrayQueue.contains(new Person("Carlos","Gloomy")));
+            System.out.println(arrayQueue.contains(new Person("Carlos","Calm")));
+            System.out.println(arrayQueue.indexOf(new Person("Rubén","Fearful")));
+            System.out.println(arrayQueue.indexOf(new Person("Rubén","Calm")));
 
-/*           System.out.println(arrayQueue.contains(new Person("Erick","Fearful")));
-            System.out.println(arrayQueue.contains(new Person("Mariana","Anger")));
-            System.out.println(arrayQueue.indexOf(new Person("Jason", "Calm")));*/
+            arrayQueue = deleteByMood(arrayQueue);
+            System.out.println(arrayQueue);
+            System.out.println(arrayQueue.size());
 
         } catch (QueueException e) {
             throw new RuntimeException(e);
         }
 
+    }
+    public ArrayQueue deleteByMood(ArrayQueue s) throws QueueException {
+        ArrayQueue aux = new ArrayQueue(s.size());
+        while(!s.isEmpty()){
+            Person person = (Person) s.front();
+            if(person.getMood()=="Cheerful"){
+                s.deQueue();
+            }
+            aux.enQueue(s.deQueue());
+        }
+        while(!aux.isEmpty()){
+            s.enQueue(aux.deQueue());
+        }
+        return s;
     }
 }

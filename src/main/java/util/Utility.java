@@ -5,6 +5,7 @@
  */
 package util;
 
+import domain.ColasNListas.ArrayQueue;
 import domain.ColasNListas.ArrayStack;
 import domain.ColasNListas.LinkedQueue;
 import domain.ColasNListas.PriorityLinkedQueue;
@@ -28,6 +29,7 @@ public class Utility {
     private static PriorityLinkedQueue priorityLinkedQueue;
     private static LinkedQueue linkedQueue;
     private static ArrayStack arrayStack;
+
 
     // static initializer
     static {
@@ -121,7 +123,9 @@ public class Utility {
             case "Person":
                 Person p1 = (Person) a;
                 Person p2 = (Person) b;
-                return p1.getMood().compareToIgnoreCase(p2.getMood()) <0 ? -1:
+                return p1.getName().compareToIgnoreCase(p2.getName()) <0 ? -1:
+                        p1.getName().compareToIgnoreCase(p2.getName()) > 0 ? 1:
+                        p1.getMood().compareToIgnoreCase(p2.getMood()) < 0 ? -1:
                         p1.getMood().compareToIgnoreCase(p2.getMood()) > 0 ? 1: 0;
         }
         return 2; //Unknown
@@ -140,7 +144,7 @@ public class Utility {
         if (a instanceof String && b instanceof String) return "String";
         if (a instanceof Character && b instanceof Character) return "Character";
         if (a instanceof Person && b instanceof Person) return "Person";
-        if (a instanceof ArrayStack && b instanceof ArrayStack) return "arrayStack";
+        if (a instanceof ArrayQueue && b instanceof ArrayQueue) return "front";
         return "Unknown"; //desconocido
     }
 
