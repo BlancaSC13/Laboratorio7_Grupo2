@@ -56,6 +56,7 @@ public class QueueStackController {
         this.tblViewQueue.getItems().clear();//limpiamos el table View de Queue
 
         //***************************************************//
+        WeatherComboBox.getSelectionModel().clearSelection();
         this.arrayStack.clear();//reseteamos la variable de stack
         //falta resetear el array en el util.Utility
         this.tblViewSTACK.getItems().clear();//limpiamos el table view de Stack

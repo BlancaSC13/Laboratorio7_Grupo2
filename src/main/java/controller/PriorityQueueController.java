@@ -55,6 +55,8 @@ public class PriorityQueueController {
     void btnClearOnAction(ActionEvent event) {
         this.txtName.clear();//limpiamos el text field
         priorityLinkedQueue.clear();//reseteamos la variable de Linked Queue
+        moodComboBox.getSelectionModel().clearSelection();
+        priorityComboBox.getSelectionModel().clearSelection();
         util.Utility.setPriorityLinkedQueue(priorityLinkedQueue);//resetemos la cola
         this.PriorityTableView.getItems().clear();//limpiamos el table view
     }

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92ce4915-46b3-44d2-a389-d47216f49758" name="Changes" comment="ArrayQueueTest listo">
+    <list default="true" id="92ce4915-46b3-44d2-a389-d47216f49758" name="Changes" comment="HeaderLinkedQueueTest listo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Utility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/domain/HeaderLinkedQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/HeaderLinkedQueueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PriorityQueueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PriorityQueueController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +82,20 @@
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HeaderLinkedQueueTest.test2">
+  <component name="RunManager" selected="Application.HelloApplication">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ucr.lab.HelloApplication" />
+      <module name="lab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ucr.lab.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ArrayQueueTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab" />
       <extension name="coverage">
@@ -147,6 +159,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HelloApplication" />
         <item itemvalue="JUnit.HeaderLinkedQueueTest.test2" />
         <item itemvalue="JUnit.ArrayQueueTest.test" />
         <item itemvalue="JUnit.LinkedQueueTest.test2" />
@@ -227,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683260421087</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="HeaderLinkedQueueTest listo">
+      <created>1683327110374</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683327110374</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +272,7 @@
     <MESSAGE value="clear y set" />
     <MESSAGE value="LinkedQueueTest listo" />
     <MESSAGE value="ArrayQueueTest listo" />
-    <option name="LAST_COMMIT_MESSAGE" value="ArrayQueueTest listo" />
+    <MESSAGE value="HeaderLinkedQueueTest listo" />
+    <option name="LAST_COMMIT_MESSAGE" value="HeaderLinkedQueueTest listo" />
   </component>
 </project>
