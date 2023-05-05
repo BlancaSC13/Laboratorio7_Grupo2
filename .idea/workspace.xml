@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="92ce4915-46b3-44d2-a389-d47216f49758" name="Changes" comment="ArrayQueueTest listo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Objetos/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Objetos/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Utility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/domain/ArrayQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/ArrayQueueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/domain/HeaderLinkedQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/HeaderLinkedQueueTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ArrayQueueTest.test">
+  <component name="RunManager" selected="JUnit.HeaderLinkedQueueTest.test2">
     <configuration name="ArrayQueueTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab" />
       <extension name="coverage">
@@ -148,9 +147,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HeaderLinkedQueueTest.test2" />
         <item itemvalue="JUnit.ArrayQueueTest.test" />
         <item itemvalue="JUnit.LinkedQueueTest.test2" />
-        <item itemvalue="JUnit.HeaderLinkedQueueTest.test2" />
       </list>
     </recent_temporary>
   </component>

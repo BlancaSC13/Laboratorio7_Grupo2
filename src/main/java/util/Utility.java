@@ -9,6 +9,7 @@ import domain.ColasNListas.ArrayQueue;
 import domain.ColasNListas.ArrayStack;
 import domain.ColasNListas.LinkedQueue;
 import domain.ColasNListas.PriorityLinkedQueue;
+import domain.Objetos.Climate;
 import domain.Objetos.Person;
 
 import java.text.DecimalFormat;
@@ -136,6 +137,7 @@ public class Utility {
         if (a instanceof String) return "String";
         if (a instanceof Character) return "Character";
         if (a instanceof ArrayStack) return "arrayStack";
+        if (a instanceof Climate) return "climate";
         return "Unknown"; //desconocido
     }
 
