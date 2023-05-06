@@ -29,6 +29,15 @@ public class Utility {
     private static long seed;        // pseudo-random number generator seed
     private static PriorityLinkedQueue priorityLinkedQueue;
     private static LinkedQueue linkedQueue;
+
+    public static ArrayStack getArrayStack() {
+        return arrayStack;
+    }
+
+    public static void setArrayStack(ArrayStack arrayStack) {
+        Utility.arrayStack = arrayStack;
+    }
+
     private static ArrayStack arrayStack;
 
 
