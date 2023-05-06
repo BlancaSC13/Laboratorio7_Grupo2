@@ -79,6 +79,7 @@ public class PriorityLinkedQueue implements Queue {
 
     public void enQueue2(Person person, String priori, LinkedQueue pri) throws QueueException {
         int priority = util.Utility.priority(priori);
+        System.out.println("Adding element " + person.getName() + " with priority " + priority);
         Node newNode = new Node(person,priority);
         priorityC.enQueue(priority);
 
@@ -86,6 +87,8 @@ public class PriorityLinkedQueue implements Queue {
             rear = newNode;
             //garantizamos que anterior queda apuntando al primer nodo
             front = newNode;
+
+           System.out.println("Queue was empty. Added element " + front.getData() + " with priority " + front.getPriority());
         }else {
             enQueue(newNode.data);
             LinkedQueue lq1 = new LinkedQueue();
@@ -118,8 +121,10 @@ public class PriorityLinkedQueue implements Queue {
                 enQueue(lq1.deQueue());
                 priorityC.enQueue(lq11.deQueue());
             }
-        }
+        } System.out.println("Added element " + person.getName() + " with priority " + priority);
+        System.out.println(toString());
         pri = priorityC;
+        System.out.println(pri.toString());
         count++;
     }
 
