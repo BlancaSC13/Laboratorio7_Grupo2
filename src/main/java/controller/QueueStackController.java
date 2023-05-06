@@ -106,7 +106,6 @@ public class QueueStackController {
                         i=i-1;
                     }
                 }
-                System.out.println(linkedQueue);
                 alert.setContentText("The lists have been successfully self-filled!");
                 alert.setAlertType(Alert.AlertType.INFORMATION);
                 Utility.setLinkedQueue(this.linkedQueue);
@@ -141,7 +140,6 @@ public class QueueStackController {
             if (isValid()){
                 if (this.linkedQueue.isEmpty()) {
                     this.linkedQueue.enQueue(new Climate(new Place(placeTxtField.getText()), new Weather((String) WeatherComboBox.getValue())));
-                    System.out.println(linkedQueue);
                     alert.setContentText("The weather has been added successfully!");
                     alert.setAlertType(Alert.AlertType.INFORMATION);
                     Utility.setLinkedQueue(this.linkedQueue);
@@ -152,7 +150,6 @@ public class QueueStackController {
                     WeatherComboBox.getSelectionModel().clearSelection();
                 }else if (!this.linkedQueue.contains(new Climate(new Place(placeTxtField.getText()), new Weather((String) WeatherComboBox.getValue()))) && isValid()) {
                     this.linkedQueue.enQueue(new Climate(new Place(placeTxtField.getText()), new Weather((String) WeatherComboBox.getValue())));
-                    System.out.println(linkedQueue);
                     alert.setContentText("The weather has been added successfully!");
                     alert.setAlertType(Alert.AlertType.INFORMATION);
                     Utility.setLinkedQueue(this.linkedQueue);
@@ -184,7 +181,6 @@ public class QueueStackController {
                 while (!this.linkedQueue.isEmpty()) {
                     arrayStack.push(this.linkedQueue.deQueue());
                 }
-                System.out.println(arrayStack.toString());
                 alert.setContentText("The lists have been successfully changed!");
                 alert.setAlertType(Alert.AlertType.INFORMATION);
                 Utility.setArrayStack(this.arrayStack);

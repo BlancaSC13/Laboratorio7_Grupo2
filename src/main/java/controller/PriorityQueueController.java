@@ -156,7 +156,6 @@ public class PriorityQueueController {
                     Person person = new Person(this.txtName.textProperty().getValue(), moodComboBox.getValue());
                     priorityLinkedQueue.enQueue2(person, priorityComboBox.getValue(), priorityLinkedQueue.getPriorityC());
                     util.Utility.setPriorityLinkedQueue(priorityLinkedQueue);
-                    System.out.println(priorityLinkedQueue);
                     alert.setAlertType(Alert.AlertType.INFORMATION);
                     alert.setContentText("Person added correctly!");
 
