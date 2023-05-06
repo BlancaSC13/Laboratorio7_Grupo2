@@ -107,6 +107,7 @@ public class PriorityQueueController {
                         priorityLinkedQueue.enQueue2(person2, util.Utility.priorityToInteger(util.Utility.random(1,3)), priorityLinkedQueue.getPriorityC());
                     }else {
                         i=i-1;
+                        System.out.println("Si se usa");
                     }
                 }
             }else {
@@ -116,12 +117,16 @@ public class PriorityQueueController {
                         priorityLinkedQueue.enQueue2(person, util.Utility.priorityToInteger(util.Utility.random(1,3)), priorityLinkedQueue.getPriorityC());
                     }else {
                         i=i-1;
+                        System.out.println("Se usa");
+
                     }
                 }
             }
             util.Utility.setPriorityLinkedQueue(priorityLinkedQueue);
+            System.out.println(priorityLinkedQueue);
             alert.setAlertType(Alert.AlertType.INFORMATION);
             alert.setContentText("Person added correctly!");
+            System.out.println(priorityLinkedQueue.size());
             PriorityTableView.setItems(getDato());
             priorityComboBox.getSelectionModel().clearSelection();
             moodComboBox.getSelectionModel().clearSelection();
@@ -151,6 +156,7 @@ public class PriorityQueueController {
                     Person person = new Person(this.txtName.textProperty().getValue(), moodComboBox.getValue());
                     priorityLinkedQueue.enQueue2(person, priorityComboBox.getValue(), priorityLinkedQueue.getPriorityC());
                     util.Utility.setPriorityLinkedQueue(priorityLinkedQueue);
+                    System.out.println(priorityLinkedQueue);
                     alert.setAlertType(Alert.AlertType.INFORMATION);
                     alert.setContentText("Person added correctly!");
 
@@ -158,6 +164,7 @@ public class PriorityQueueController {
                         Person person = new Person(this.txtName.textProperty().getValue(), moodComboBox.getValue());
                         priorityLinkedQueue.enQueue2(person, priorityComboBox.getValue(),priorityLinkedQueue.getPriorityC());
                         util.Utility.setPriorityLinkedQueue(priorityLinkedQueue);
+                        System.out.println(priorityLinkedQueue);
                         alert.setAlertType(Alert.AlertType.INFORMATION);
                         alert.setContentText("Person added correctly!");
 
