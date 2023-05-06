@@ -133,10 +133,18 @@ public class Utility {
             case "Person":
                 Person p1 = (Person) a;
                 Person p2 = (Person) b;
-                return p1.getName().compareToIgnoreCase(p2.getName()) <0 ? -1:
-                        p1.getName().compareToIgnoreCase(p2.getName()) > 0 ? 1:
-                        p1.getMood().compareToIgnoreCase(p2.getMood()) < 0 ? -1:
-                        p1.getMood().compareToIgnoreCase(p2.getMood()) > 0 ? 1: 0;
+                return p1.getName().compareToIgnoreCase(p2.getName()) < 0 ? -1 :
+                        p1.getName().compareToIgnoreCase(p2.getName()) > 0 ? 1 :
+                                p1.getMood().compareToIgnoreCase(p2.getMood()) < 0 ? -1 :
+                                        p1.getMood().compareToIgnoreCase(p2.getMood()) > 0 ? 1 : 0;
+            case "Climate":
+                Climate c1 = (Climate) a;
+                Climate c2 = (Climate) b;
+                return c1.getPlace().getNombre().compareToIgnoreCase(c2.getPlace().getNombre()) < 0 ? -1 :
+                        c1.getPlace().getNombre().compareToIgnoreCase(c2.getPlace().getNombre()) > 0 ? 1 :
+                                c1.getWeather().getName().compareToIgnoreCase(c2.getWeather().getName()) < 0 ? -1 :
+                                        c1.getWeather().getName().compareToIgnoreCase(c2.getWeather().getName()) > 0 ? 1 : 0;
+
         }
         return 2; //Unknown
     }
@@ -155,6 +163,7 @@ public class Utility {
         if (a instanceof String && b instanceof String) return "String";
         if (a instanceof Character && b instanceof Character) return "Character";
         if (a instanceof Person && b instanceof Person) return "Person";
+        if (a instanceof Climate && b instanceof Climate) return "Climate";
         return "Unknown"; //desconocido
     }
 
@@ -227,19 +236,21 @@ public class Utility {
         return lista[random(9)];
     }
 
-    public static String getWeather(){
-        String list[]= {"rainy", "thunderstorm", "sunny",
+    public static String getWeather() {
+        String list[] = {"rainy", "thunderstorm", "sunny",
                 "cloudy", "foggy"};
         return list[random(4)];
     }
-    public static String getPlace(){
-        String list[]= {"San José", "Ciudad Quesada", "Paraíso",
+
+    public static String getPlace() {
+        String list[] = {"San José", "Ciudad Quesada", "Paraíso",
                 "Turrialba", "Limón", "Liberia", "Puntarenas", "San Ramón", "Puerto Viejo", "Volcán",
                 "Irazú", "Pérez Zeledón", "Palmares", "Orotina", "El coco", "Ciudad Neilly", "Sixaola",
-                "Guápiles", "Siquirres"," El Guarco", "Cartago", "Santa Bárbara", "Jacó", "Manuel Antonio",
+                "Guápiles", "Siquirres", " El Guarco", "Cartago", "Santa Bárbara", "Jacó", "Manuel Antonio",
                 "Quepos", "Santa Cruz", "Nicoya"};
         return list[random(26)];
     }
+
     public static String getIslandNames(int i) {
         String list[] = {"Santorini", "Creta", "Sri Lanka", "Ibiza",
                 "Isla de Pascua", "Bahamas", "Maldivas", "Gran Caimán",
@@ -247,7 +258,7 @@ public class Utility {
         return list[i];
     }
 
-    public static String mood(int i) {
+    public static String mood() {
         String list[] = {
                 "Happiness", "Sadness", "Anger", "Sickness",
                 "Cheerful", "Reflective", "Gloomy", "Romantic",
@@ -256,4 +267,32 @@ public class Utility {
         return list[random(12)];
     }
 
+    public static Integer priority(String value) {
+        if (value == null) {
+            throw new IllegalArgumentException("Priority cannot be null");
+        }
+        switch (value) {
+            case "Low":
+                return 1;
+            case "Medium":
+                return 2;
+            case "High":
+                return 3;
+            default:
+                throw new IllegalArgumentException("Invalid priority value: " + value);
+        }
+    }
+
+    public static String priorityToInteger(Integer value) {
+        switch (value) {
+            case 1:
+                return "Low";
+            case 2:
+                return "Medium";
+            case 3:
+                return "High";
+            default:
+                throw new IllegalArgumentException("Invalid priority value: " + value);
+        }
+    }
 }

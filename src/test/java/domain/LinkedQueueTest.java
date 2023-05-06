@@ -4,6 +4,7 @@ package domain;
 import domain.ColasNListas.*;
 import domain.Exceptions.QueueException;
 import domain.Exceptions.StackException;
+import domain.Objetos.Climate;
 import domain.Objetos.Person;
 import domain.Objetos.Place;
 import domain.Objetos.Weather;
@@ -50,7 +51,7 @@ class LinkedQueueTest {
         ArrayQueue arrayQueue = new ArrayQueue(20);
         try {
             for (int i = 0; i < 20; i++) {
-                arrayQueue.enQueue(new Person(util.Utility.getPerson(i), util.Utility.mood(i)));
+                arrayQueue.enQueue(new Person(util.Utility.getPerson(i), util.Utility.mood()));
             }
         } catch (QueueException e) {
             throw new RuntimeException(e);
@@ -100,6 +101,13 @@ class LinkedQueueTest {
 
     }
 
+    @Test
+    void test3() throws QueueException {
+        LinkedQueue linkedQueue = new LinkedQueue();
+        if (!linkedQueue.contains(new Climate(new Place("hola"), new Weather(("123"))))) {
+            linkedQueue.enQueue(new Climate(new Place("hola"), new Weather("123")));
+        }
+    }
     public LinkedQueue deQueueArray(LinkedQueue queue) {
         //ArrayStack stack = new ArrayStack(30);
         LinkedQueue aux = new LinkedQueue();

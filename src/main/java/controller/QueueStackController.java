@@ -74,7 +74,6 @@ public class QueueStackController {
             }
         });
     }
-
     private ObservableList<List<String>> getData() throws QueueException {
         ObservableList<List<String>> data = FXCollections.observableArrayList();
         for (int i = 1; i <= linkedQueue.size(); i++) {
@@ -98,11 +97,17 @@ public class QueueStackController {
     void btnAutoEnQueueOnAction(ActionEvent event) {
         if (this.linkedQueue != null) {
             try {
-                for (int i = 0; i < 20; i++) {
-                    this.linkedQueue.enQueue(new Climate(new Place(util.Utility.getPlace()), new Weather(util.Utility.getWeather())));
+                this.linkedQueue.enQueue(new Climate(new Place(util.Utility.getPlace()), new Weather(util.Utility.getWeather())));
+                for (int i = 0; i < 19; i++) {
+                    Object ob = new Climate(new Place(util.Utility.getPlace()), new Weather(util.Utility.getWeather()));
+                    if (!this.linkedQueue.contains(ob)){
+                    this.linkedQueue.enQueue(ob);
+                    }else {
+                        i=i-1;
+                    }
                 }
                 System.out.println(linkedQueue);
-                alert.setContentText("Job Position was added to the list");
+                alert.setContentText("The lists have been successfully self-filled!");
                 alert.setAlertType(Alert.AlertType.INFORMATION);
                 Utility.setLinkedQueue(this.linkedQueue);
                 alert.showAndWait();
@@ -116,12 +121,12 @@ public class QueueStackController {
     @FXML
     void btnClearOnAction(ActionEvent event) {
         this.placeTxtField.clear();//limpiamos el text field
-
+        WeatherComboBox.getSelectionModel().clearSelection();
         //***************************************************//
         this.linkedQueue.clear();//reseteamos la variable de Queue
         Utility.setLinkedQueue(linkedQueue);//Reseteamos la lista
         this.tblViewQueue.getItems().clear();//limpiamos el table View de Queue
-        WeatherComboBox.getSelectionModel().clearSelection();
+
 
         //***************************************************//
         //this.arrayStack.clear();//reseteamos la variable de stack
@@ -132,19 +137,42 @@ public class QueueStackController {
 
     @FXML
     void btnEnQueueOnAction(ActionEvent event) {
-        if (this.linkedQueue != null) {
-            try {
-                this.linkedQueue.enQueue(new Climate(new Place(placeTxtField.getText()), new Weather((String) WeatherComboBox.getValue())));
-                System.out.println(linkedQueue);
-                alert.setContentText("Job Position was added to the list");
-                alert.setAlertType(Alert.AlertType.INFORMATION);
-                Utility.setLinkedQueue(this.linkedQueue);
-                alert.showAndWait();
-                this.tblViewQueue.setItems(getData());
-                this.tblViewQueue.refresh();
-            } catch (QueueException e) {
-                throw new RuntimeException(e);
+        try {
+            if (isValid()){
+                if (this.linkedQueue.isEmpty()) {
+                    this.linkedQueue.enQueue(new Climate(new Place(placeTxtField.getText()), new Weather((String) WeatherComboBox.getValue())));
+                    System.out.println(linkedQueue);
+                    alert.setContentText("The weather has been added successfully!");
+                    alert.setAlertType(Alert.AlertType.INFORMATION);
+                    Utility.setLinkedQueue(this.linkedQueue);
+                    alert.showAndWait();
+                    this.tblViewQueue.setItems(getData());
+                    this.tblViewQueue.refresh();
+                    this.placeTxtField.clear();//limpiamos el text field
+                    WeatherComboBox.getSelectionModel().clearSelection();
+                }else if (!this.linkedQueue.contains(new Climate(new Place(placeTxtField.getText()), new Weather((String) WeatherComboBox.getValue()))) && isValid()) {
+                    this.linkedQueue.enQueue(new Climate(new Place(placeTxtField.getText()), new Weather((String) WeatherComboBox.getValue())));
+                    System.out.println(linkedQueue);
+                    alert.setContentText("The weather has been added successfully!");
+                    alert.setAlertType(Alert.AlertType.INFORMATION);
+                    Utility.setLinkedQueue(this.linkedQueue);
+                    alert.showAndWait();
+                    this.tblViewQueue.setItems(getData());
+                    this.tblViewQueue.refresh();
+                    this.placeTxtField.clear();//limpiamos el text field
+                    WeatherComboBox.getSelectionModel().clearSelection();
+                }else if (this.linkedQueue.contains(new Climate(new Place(placeTxtField.getText()), new Weather((String) WeatherComboBox.getValue()))) && isValid()){
+                    alert.setContentText("The weather has already been added to the list before");
+                    alert.setAlertType(Alert.AlertType.ERROR);
+                    alert.showAndWait();
             }
+
+        }else{
+                alert.setContentText("Fill in all the requested spaces");
+                alert.setAlertType(Alert.AlertType.ERROR);
+                alert.showAndWait();}
+            } catch (QueueException ex) {
+            throw new RuntimeException(ex);
         }
 
     }
@@ -157,11 +185,13 @@ public class QueueStackController {
                     arrayStack.push(this.linkedQueue.deQueue());
                 }
                 System.out.println(arrayStack.toString());
-                alert.setContentText("Job Position was added to the list");
+                alert.setContentText("The lists have been successfully changed!");
                 alert.setAlertType(Alert.AlertType.INFORMATION);
                 Utility.setArrayStack(this.arrayStack);
                 alert.showAndWait();
                 this.tblViewSTACK.setItems(getData2());
+                this.placeTxtField.clear();//limpiamos el text field
+                WeatherComboBox.getSelectionModel().clearSelection();
 
             } catch (QueueException e) {
                 throw new RuntimeException(e);
@@ -186,4 +216,7 @@ public class QueueStackController {
         }
         return dato;
     }
+    public boolean isValid(){return !this.placeTxtField.getText().isEmpty() && !this.WeatherComboBox.getSelectionModel().isEmpty();}
+
+
 }

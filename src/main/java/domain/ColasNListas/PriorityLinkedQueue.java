@@ -2,13 +2,22 @@ package domain.ColasNListas;
 
 import domain.Exceptions.QueueException;
 import domain.Objetos.Node;
+import domain.Objetos.Person;
+import domain.Objetos.Testeoo;
 import domain.interfaces.Queue;
 
 public class PriorityLinkedQueue implements Queue {
 
     private Node front;//apunta al anterior
+
     private Node rear;//apunta al siguiente
     private int count; //control de elementos encolados
+
+    public LinkedQueue getPriorityC() {
+        return priorityC;
+    }
+
+    LinkedQueue priorityC = new LinkedQueue();
 
     public PriorityLinkedQueue() {
         this.front = this.rear = null;
@@ -68,30 +77,54 @@ public class PriorityLinkedQueue implements Queue {
         count++;
     }
 
-    public void enQueue(Object element, Integer priority) throws QueueException {
-        Node newNode = new Node(element, priority);
-        if (isEmpty()) {//cola no existe
+    public void enQueue2(Person person, String priori, LinkedQueue pri) throws QueueException {
+        int priority = util.Utility.priority(priori);
+        System.out.println("Adding element " + person.getName() + " with priority " + priority);
+        Node newNode = new Node(person,priority);
+        priorityC.enQueue(priority);
+
+        if (isEmpty()) {
             rear = newNode;
             //garantizamos que anterior queda apuntando al primer nodo
             front = newNode;
-        } else {//la cola existe
-            Node aux = front;
-            Node prev = front;
-            while (aux != null && aux.priority > priority) {
-                prev = aux; //dejamos un rastro en el nodo anterior
-                aux = aux.next;//movemos al siguiente nodo
-            }//Se sale del while cuando alcanza nulo o la prioridad de nuevo elemento es más alta
-            if (aux == front) {//El nuevo elemento tiene prioridad más alta
-                newNode.next = front;
-                front = newNode;
-            } else if (aux == null) { //prev está en el último nodo
-                prev.next = newNode;
-                rear = newNode;
-            } else {
-                prev.next = newNode;
-                newNode.next = aux;
+
+           System.out.println("Queue was empty. Added element " + front.getData() + " with priority " + front.getPriority());
+        }else {
+            enQueue(newNode.data);
+            LinkedQueue lq1 = new LinkedQueue();
+            LinkedQueue lq11 = new LinkedQueue();
+            LinkedQueue lq2 = new LinkedQueue();
+            LinkedQueue lq22 = new LinkedQueue();
+            LinkedQueue lq3 = new LinkedQueue();
+            LinkedQueue lq33 = new LinkedQueue();
+            while (!isEmpty()){
+                    if ((Integer) priorityC.front() == 1){
+                        lq1.enQueue(deQueue());
+                        lq11.enQueue(priorityC.deQueue());
+                    } else if ((Integer) priorityC.front() == 2) {
+                        lq2.enQueue(deQueue());
+                        lq22.enQueue(priorityC.deQueue());
+                    }else {
+                        lq3.enQueue(deQueue());
+                        lq33.enQueue(priorityC.deQueue());
+                    }
+                }
+            while (!lq3.isEmpty()){
+                enQueue(lq3.deQueue());
+                priorityC.enQueue(lq33.deQueue());
             }
-        }
+            while (!lq2.isEmpty()){
+                enQueue(lq2.deQueue());
+                priorityC.enQueue(lq22.deQueue());
+            }
+            while (!lq1.isEmpty()){
+                enQueue(lq1.deQueue());
+                priorityC.enQueue(lq11.deQueue());
+            }
+        } System.out.println("Added element " + person.getName() + " with priority " + priority);
+        System.out.println(toString());
+        pri = priorityC;
+        System.out.println(pri.toString());
         count++;
     }
 
@@ -151,13 +184,11 @@ public class PriorityLinkedQueue implements Queue {
         try {
             PriorityLinkedQueue aux = new PriorityLinkedQueue();
             while (!isEmpty()) {
-                result += front() + ", ";
-                Integer priority = front.priority;
-                aux.enQueue(deQueue(), priority);
+                result += front.getData() + ", ";
+                aux.enQueue(deQueue());
             }
             while (!aux.isEmpty()) {
-                Integer priority = aux.front.priority;
-                enQueue(aux.deQueue(), priority);
+                enQueue(aux.deQueue());
             }
         } catch (QueueException ex) {
             throw new RuntimeException(ex);
