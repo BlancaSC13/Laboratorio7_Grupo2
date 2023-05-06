@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92ce4915-46b3-44d2-a389-d47216f49758" name="Changes" comment="workspace">
+    <list default="true" id="92ce4915-46b3-44d2-a389-d47216f49758" name="Changes" comment="system out">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/PriorityQueueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PriorityQueueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/QueueStackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/QueueStackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/ColasNListas/PriorityLinkedQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/ColasNListas/PriorityLinkedQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +211,7 @@
       <workItem from="1683155568256" duration="10454000" />
       <workItem from="1683214799220" duration="16300000" />
       <workItem from="1683407074800" duration="2265000" />
-      <workItem from="1683410509184" duration="1780000" />
+      <workItem from="1683410509184" duration="3709000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1683216136862</created>
@@ -313,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683411680166</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="system out">
+      <created>1683412347691</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1683412347691</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,6 +348,7 @@
     <MESSAGE value="QueueStackController lista" />
     <MESSAGE value="Eliminación de System.out.print" />
     <MESSAGE value="workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace" />
+    <MESSAGE value="system out" />
+    <option name="LAST_COMMIT_MESSAGE" value="system out" />
   </component>
 </project>
